@@ -26,7 +26,7 @@
 							</thead>
 							<tbody>
 							<tr v-for="(row, index) in expense_categories">
-								<th scope="row">{{row.description}}</th>
+								<th scope="row">{{row.name}}</th>
 								<td class="text-right">
 									<number-format-component :input_value="Number(row.total_expenses.default)"/>
 								</td>

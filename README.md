@@ -1,6 +1,13 @@
 # Jeofer Chris Basanes
 ### Senior Developer Exam- ARB Call Facilities
+###### Login Page
+[![Login](https://files.fm/thumb_show.php?i=kqqpby2n5 "Login")](https://files.fm/thumb_show.php?i=kqqpby2n5 "Login")
 
+------------
+
+
+###### Dashboard
+[![Dashboard](https://files.fm/thumb_show.php?i=f9vm2mhsh "Dashboard")](https://files.fm/thumb_show.php?i=f9vm2mhsh "Dashboard")
 ##### Laravel Version (7.8.1)
 ##### VueJs Version (2.6.11)
 
@@ -65,3 +72,9 @@ You may change the **server_url** and **assets_url** according to your configura
 `npm run serve`
 ##### 16. Run your backend
 `php artisan serve`
+
+Default Username for Administrator : **admin@email.com**
+Password : **secret**
+
+Default Username for User : **user@email.com**
+Password : **secret**
