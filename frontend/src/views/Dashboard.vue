@@ -97,7 +97,7 @@ export default {
 
                 this.is_saving=false;
                 response.data.forEach((value, index) => {
-                    let new_category=[value.description,value.total_expenses.default];
+                    let new_category=[value.name,value.total_expenses.default];
                     this.chartData.push(new_category);
                 });
             }).catch(error => console.log(error));
