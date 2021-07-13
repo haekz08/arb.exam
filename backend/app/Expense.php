@@ -28,12 +28,17 @@ class Expense extends Model
     protected $appends = [
         'formatted_created_at',
         'formatted_entry_date',
-        'formatted_amount'
+        'formatted_amount',
+        'creator_name'
     ];
 
     public function expense_category()
     {
         return $this->belongsTo(ExpenseCategory::class, 'expense_category_id', 'id');
+    }
+    public function creator()
+    {
+        return $this->belongsTo(User::class, 'created_by', 'id');
     }
     public function getFormattedCreatedAtAttribute()
     {
@@ -46,5 +51,9 @@ class Expense extends Model
     public function getFormattedAmountAttribute()
     {
         return $this->format_amount($this->attributes['amount']);
+    }
+    public function getCreatorNameAttribute()
+    {
+        return $this->creator->name;
     }
 }

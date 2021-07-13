@@ -28,7 +28,8 @@
                     {key: 'expense_category.name', label:'Expense category'},
                     {key: 'formatted_amount.other_formats.format_1', label:'Amount'},
                       {key: 'formatted_entry_date.other_formats.format_1', label:'Entry Date'},
-                      {key: 'formatted_created_at.other_formats.format_1', label:'Created At'}
+                      {key: 'formatted_created_at.other_formats.format_1', label:'Created At'},
+                      {key: 'creator_name', label:'Created By'}
                   ]
               },
               modal:false,
