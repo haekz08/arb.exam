@@ -1,0 +1,58 @@
+// Here you can add other styles
+
+.loader{
+  background: rgba(255, 255, 255, 0.8);
+  position:absolute;
+  z-index: 9999;
+  width: 100%;
+  left:0;
+  top:0;
+  height:100%;
+  text-align: center;
+  margin:0;
+  padding:0;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8)!important;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.amount-100{
+  width: 100px;
+  display: block;
+  text-align: right;
+}
+.xxl-modal .modal-dialog{
+  max-width:98%!important
+}
+
+.list-group-item-action:hover, .list-group-item-action:focus {
+  z-index: 1;
+  text-decoration: none;
+  color: #768192;
+  background-color:#cce5ff;
+}
+.table th, .table td {
+  vertical-align:middle;
+}
+
+.nav-wrapper-custom-width{
+  width: 250px!important;
+}
+
+.custom-font .text-value-lg{
+  font-size:14px;
+}
+.custom-font .card-body .col{
+  padding: 0;
+}
+.min-height-300{
+  min-height: 300px;
+}
