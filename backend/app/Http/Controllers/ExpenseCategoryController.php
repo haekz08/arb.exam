@@ -30,7 +30,7 @@ class ExpenseCategoryController extends Controller
             $data = ExpenseCategory::where('name', 'like', '%'.$this->search.'%')->orWhere('description', 'like', '%'.$this->search.'%')->paginate($this->per_page);
         }else
         {
-            $data = ExpenseCategory::with(['expenses'])->get();
+            $data = ExpenseCategory::with(['expenses','all_expenses'])->get();
         }
         return response($data);
     }

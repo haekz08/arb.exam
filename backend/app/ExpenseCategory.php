@@ -27,11 +27,16 @@ class ExpenseCategory extends Model
     ];
     protected $appends = [
         'formatted_created_at',
-        'total_expenses'
+        'total_expenses',
+        'grand_total_expenses'
     ];
     public function expenses()
     {
         return $this->hasMany(Expense::class, 'expense_category_id', 'id')->where('created_by',Auth::id());
+    }
+    public function all_expenses()
+    {
+        return $this->hasMany(Expense::class, 'expense_category_id', 'id');
     }
     public function getFormattedCreatedAtAttribute()
     {
@@ -39,5 +44,8 @@ class ExpenseCategory extends Model
     }
     public function getTotalExpensesAttribute(){
         return $this->format_amount($this->expenses->sum('amount'));
+    }
+    public function getGrandTotalExpensesAttribute(){
+        return $this->format_amount($this->all_expenses->sum('amount'));
     }
 }
