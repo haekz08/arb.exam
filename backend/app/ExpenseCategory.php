@@ -5,6 +5,7 @@ namespace App;
 use App\Traits\FormatterTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Auth;
 
 class ExpenseCategory extends Model
 {
@@ -30,7 +31,7 @@ class ExpenseCategory extends Model
     ];
     public function expenses()
     {
-        return $this->hasMany(Expense::class, 'expense_category_id', 'id');
+        return $this->hasMany(Expense::class, 'expense_category_id', 'id')->where('created_by',Auth::id());
     }
     public function getFormattedCreatedAtAttribute()
     {
